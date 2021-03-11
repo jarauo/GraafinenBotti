@@ -7,9 +7,9 @@ import javax.security.auth.login.LoginException;
 
 public class Botti {
 
-    public static void launchBot() throws Exception {
+    public static void launchBot(String token) throws Exception {
         //Luodaan JDABuilderi ja annetaan sille tokeni
-        JDABuilder jdabuilder = JDABuilder.createDefault("syötä tokeni tähän");
+        JDABuilder jdabuilder = JDABuilder.createDefault(token);
 
         JDA jda;
         BotEventListeners botEvents = new BotEventListeners();
@@ -18,7 +18,8 @@ public class Botti {
         try {
             jda = jdabuilder.build();
         } catch (LoginException e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new Exception("Huah");
         }
     }
 }
