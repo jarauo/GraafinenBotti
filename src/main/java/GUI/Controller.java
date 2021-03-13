@@ -1,5 +1,6 @@
 package GUI;
 ;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -24,5 +25,9 @@ public class Controller {
 
         //String input = inputToken.getText();
         //errorLabel.setText(input);
+    }
+
+    public void exit(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }

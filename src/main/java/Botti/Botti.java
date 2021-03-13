@@ -11,15 +11,19 @@ public class Botti {
         //Luodaan JDABuilderi ja annetaan sille tokeni
         JDABuilder jdabuilder = JDABuilder.createDefault(token);
 
-        JDA jda;
+        //JDA jda;
         BotEventListeners botEvents = new BotEventListeners();
-        jdabuilder.addEventListeners(botEvents);
+        UnicaMenuEventListener safka = new UnicaMenuEventListener();
+
+        jdabuilder.addEventListeners(botEvents,safka);
+
 
         try {
-            jda = jdabuilder.build();
+            JDA jda = jdabuilder.build();
         } catch (LoginException e){
             //e.printStackTrace();
             throw new Exception("Huah");
         }
     }
+
 }

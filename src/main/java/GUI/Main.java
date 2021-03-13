@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         //URL url = Main.class.getResource("scene1.fxml");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/scene1.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Discord Bot Dashboard");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
@@ -21,4 +21,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(Main.class);
     }
+
 }

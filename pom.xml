@@ -31,6 +31,12 @@
             <artifactId>JDA</artifactId>
             <version>4.2.0_240</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.9.2</version>
+        </dependency>
     </dependencies>
 
     <repositories>

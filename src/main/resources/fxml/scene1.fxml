@@ -9,9 +9,10 @@
 <VBox fx:controller="GUI.Controller"
       xmlns:fx="http://javafx.com/fxml" alignment="center">
     <children>
-    <Label text="Syötä token:" alignment="center"/>
-    <PasswordField fx:id="inputToken" alignment="center"/>
-    <Button text="Kirjaudu sisään" onAction="#login" alignment="center"/>
-    <Label fx:id="errorLabel" text="" alignment="center"/>
+        <Label text="Syötä token:" alignment="center"/>
+        <PasswordField fx:id="inputToken" alignment="center"/>
+        <Button text="Kirjaudu sisään" onAction="#login" alignment="center"/>
+        <Label fx:id="errorLabel" text="" alignment="center"/>
+        <Button text="Exit" onAction="#exit" alignment="center"/>
     </children>
 </VBox>
