@@ -6,6 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 
+/**
+ * Kontrolleri-luokka GUI-elementtien metodeille.
+ * @author Jani Uotinen
+ */
 public class Controller {
     @FXML
     private Label errorLabel;

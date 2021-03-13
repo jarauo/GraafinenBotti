@@ -16,7 +16,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "ErrorText"
 })
 
-
+/**
+ * Rakenneluokka JSON-parseemiseen.
+ * @author Valtteri Ingman
+ */
 public class Restaurant {
 
     @JsonProperty("RestaurantName")

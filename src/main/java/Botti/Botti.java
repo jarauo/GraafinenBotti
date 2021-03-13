@@ -5,6 +5,10 @@ import net.dv8tion.jda.api.JDABuilder;
 
 import javax.security.auth.login.LoginException;
 
+/**
+ * Botti-luokka discord botin käynnistämiseen.
+ * @author Jani Uotinen
+ */
 public class Botti {
 
     public static void launchBot(String token) throws Exception {

@@ -13,6 +13,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "Components"
 })
 
+/**
+ * Rakenneluokka JSON-parseemiseen.
+ * @author Valtteri Ingman
+ */
 public class SetMenu  {
 
     @JsonProperty("SortOrder")
@@ -23,8 +27,6 @@ public class SetMenu  {
     private String price;
     @JsonProperty("Components")
     private List<String> components = null;
-
-
 
     @Override
     public String toString() {

@@ -6,6 +6,8 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.layout.VBox?>
 
+<!-- FXML tiedosto GUI elementtien luomiseen. Tekijänä Jani Uotinen -->
+
 <VBox fx:controller="GUI.Controller"
       xmlns:fx="http://javafx.com/fxml" alignment="center">
     <children>

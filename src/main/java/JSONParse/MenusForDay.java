@@ -12,6 +12,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "LunchTime",
         "SetMenus"
 })
+
+/**
+ * Rakenneluokka JSON-parseemiseen.
+ * @author Valtteri Ingman
+ */
 public class MenusForDay {
 
     @JsonProperty("Date")
@@ -20,8 +25,6 @@ public class MenusForDay {
     private String lunchTime;
     @JsonProperty("SetMenus")
     private List<SetMenu> setMenus = null;
-
-
 
     @Override
     public String toString() {
