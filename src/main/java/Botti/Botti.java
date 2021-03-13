@@ -11,13 +11,13 @@ public class Botti {
         //Luodaan JDABuilderi ja annetaan sille tokeni
         JDABuilder jdabuilder = JDABuilder.createDefault(token);
 
-        //JDA jda;
+        //Luodaan botille event listenerit ja lisätään ne botille ennen buildaamista
         BotEventListeners botEvents = new BotEventListeners();
         UnicaMenuEventListener safka = new UnicaMenuEventListener();
 
         jdabuilder.addEventListeners(botEvents,safka);
 
-
+        //Buildataan botti.
         try {
             JDA jda = jdabuilder.build();
         } catch (LoginException e){
