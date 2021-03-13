@@ -27,7 +27,9 @@ public class UnicaMenuEventListener extends ListenerAdapter {
         if (event.getMessage().getContentRaw().equals("!ruokalat")) {
             event.getChannel().sendMessage("Yliopiston kampus\n" +"   !assari\n"+ "   !macciavelli\n"+ "   !galilei\n"+ "   !kaara\n"+"Kupittaan kampus\n"+ "   !dental\n"+ "   !delipharma\n"+ "   !delica\n"+ "   !linus\n"+"   !kisälli\n"+"Linnankadun taidekampus\n"+"   !sigyn\n"+ "   !muusa\n"+"Muut\n"+"   !ruokakello\n"+ "   !kaivomestari\n"+ "   !fabrik\n"+ "   !piccumaccia\n").queue();
         }
-
+        /**
+         * Tässä esimerkki miten uusi rakenne toimii yleiskäyttöisen JSONMapper-luokan kanssa.
+         */
         if (event.getMessage().getContentRaw().equals("!assari")) {
             //tulostaMenu("https://www.unica.fi/modules/json/json/Index?costNumber=1920&language=fi", event );
             System.out.println("Triggeröikö eventti");
@@ -91,18 +93,5 @@ public class UnicaMenuEventListener extends ListenerAdapter {
         }
 
     }
-    /*
-    public void tulostaMenu(String jsonurl, MessageReceivedEvent event){
-        ObjectMapper mapper = new ObjectMapper();
-        try {
 
-            Restaurant ruoka = mapper.readValue(new URL(jsonurl), Restaurant.class);
-            System.out.println(ruoka);
-            event.getChannel().sendMessage(ruoka.toString()).queue();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-     */
 }
