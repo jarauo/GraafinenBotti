@@ -71,19 +71,12 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>exec</goal>
+                            <goal>java</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <executable>mvn</executable>
-                    <arguments>
-                        <argument>-X</argument>
-                        <argument>javafx:run</argument>
-                    </arguments>
-                    <environmentVariables>
-                        <LANG>en_US</LANG>
-                    </environmentVariables>
+                    <mainClass>GUI.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
