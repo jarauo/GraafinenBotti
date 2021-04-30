@@ -1,11 +1,16 @@
 package config;
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.PrettyPrinter;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import jsonparse.JSONMapper;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -67,9 +72,11 @@ public class BotConfiguration{
      * Writes the cfg.json file with current values.
      */
     public void writeToFile(){
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+
         try {
-            objectMapper.writeValue(new File("src/main/resources/cfg/cfg.json"),this.config);
+            writer.writeValue(new File("src/main/resources/cfg/cfg.json"),this.config);
         } catch (Exception e) {
             e.getStackTrace();
             System.out.println("BotConfiguration: Writing to cfg.json failed.");
