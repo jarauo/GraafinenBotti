@@ -1,4 +1,4 @@
-package JSONParse;
+package jsonparse;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;

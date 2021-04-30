@@ -1,0 +1,60 @@
+/* Muotoilut Login Scenelle. @author Jani Uotinen */
+
+.root {
+    -fx-background-color: #2f3136;
+    -fx-padding: 10 5 5 10;
+}
+
+#inputTokenLabel{
+    -fx-font-size: 12 px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+    -fx-padding: 10;
+}
+
+#vbox {
+    -fx-alignment: center;
+    -fx-border-color: #2f3136;
+    -fx-border-radius: 20;
+    -fx-padding: 10 5 5 10;
+    -fx-background-radius: 20;
+    -fx-background-color: #2f3136;
+}
+
+#loginHeaderLabel {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+#inputToken {
+    -fx-alignment: center;
+    -fx-background-color: #202225;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+#errorLabel {
+    -fx-alignment: center;
+    -fx-text-fill: red;
+}
+
+#loginButton {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: #8292ea;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#exitButton {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: #8292ea;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}

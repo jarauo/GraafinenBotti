@@ -1,12 +1,9 @@
-package Botti;
+package botti;
 
-import JSONParse.JSONMapper;
+import jsonparse.JSONMapper;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

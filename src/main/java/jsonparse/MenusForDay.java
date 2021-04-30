@@ -1,4 +1,4 @@
-package JSONParse;
+package jsonparse;
 
 import java.util.List;
 
