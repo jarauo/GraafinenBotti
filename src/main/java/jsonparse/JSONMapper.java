@@ -2,20 +2,37 @@ package jsonparse;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
 /**
- * JSONMapper luokka erilaisten JSON-rakenteiden mappaamiseen.
+ * JSONMapper class to parse different JSON structures into Java classes.
  * @ Jani Uotinen
  */
 public class JSONMapper {
 
     /**
+     * Method for parsing cfg.json file. Uses Config.class.
+     * @author Jani Uotinen
+     */
+    public static Config cfgParser() {
+
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Config config = mapper.readValue(new File("src/main/resources/cfg/cfg.json"), Config.class);
+            return config;
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error while parsing cfg file.");
+            return null;
+        }
+
+    }
+
+    /**
      * Metodi unica-ravintoloiden parseemiseen.
-     * @author Valtteri Ingman
      */
     public static String unicaParser(String jsonURL) {
 
