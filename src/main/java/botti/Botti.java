@@ -16,16 +16,17 @@ public class Botti {
         JDABuilder jdabuilder = JDABuilder.createDefault(token);
 
         //Luodaan botille event listenerit ja lisätään ne botille ennen buildaamista
-        BotEventListeners botEvents = new BotEventListeners();
-        UnicaMenuEventListener safka = new UnicaMenuEventListener();
+        BotCfgEventListener botEvents = new BotCfgEventListener();
+        //UnicaMenuEventListener safka = new UnicaMenuEventListener();
 
-        jdabuilder.addEventListeners(botEvents,safka);
+        //Lisää eventListenereitä
+        jdabuilder.addEventListeners(botEvents);
 
         //Buildataan botti.
         try {
             JDA jda = jdabuilder.build();
         } catch (LoginException e){
-            //e.printStackTrace();
+            e.printStackTrace();
             throw new Exception("Huah");
         }
     }
