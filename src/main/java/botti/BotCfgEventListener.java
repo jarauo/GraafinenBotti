@@ -40,7 +40,13 @@ public class BotCfgEventListener extends ListenerAdapter {
          */
         if (botconfig.checkLegalCommand(command)) {
             //processBotConfigCommand(event,value);
-            event.getChannel().sendMessage(botconfig.printCommandList()).queue();
+            if (command.equals("prefix")) {
+                botconfig.changePrefix(command,value);
+            }
+            if (command.equals("toinen")) {
+                event.getChannel().sendMessage(botconfig.printCommandList()).queue();
+            }
+
         }
 
         //Clear commands at the end.

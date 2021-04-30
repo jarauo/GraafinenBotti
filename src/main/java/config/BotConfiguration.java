@@ -59,6 +59,7 @@ public class BotConfiguration{
             this.config.setPrefix(value);
             writeToFile();
             System.out.println("Prefix switched.");
+            makeCommandList();
         }
     }
 
@@ -72,6 +73,8 @@ public class BotConfiguration{
         } catch (Exception e) {
             e.getStackTrace();
             System.out.println("BotConfiguration: Writing to cfg.json failed.");
+        } finally {
+
         }
 
     }
