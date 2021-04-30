@@ -92,7 +92,6 @@ public class BotConfiguration{
     public StringBuilder printCommandList() {
         StringBuilder sb = new StringBuilder();
         for (String key : this.commandList.keySet()) {
-            //System.out.printf("Key: "+key+" | Value: "+this.commandList.get(key)+"\n");
             sb.append("Key: "+key+" | Value: "+this.commandList.get(key)+"\n");
         }
         return sb;
