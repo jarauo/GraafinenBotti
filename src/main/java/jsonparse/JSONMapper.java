@@ -2,6 +2,7 @@ package jsonparse;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import config.Config;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,20 +32,4 @@ public class JSONMapper {
 
     }
 
-    /**
-     * Metodi unica-ravintoloiden parseemiseen.
-     */
-    public static String unicaParser(String jsonURL) {
-
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            Restaurant ruoka = mapper.readValue(new URL(jsonURL), Restaurant.class);
-            //System.out.println(ruoka);
-            return ruoka.toString();
-            //return "Testi";
-        } catch (IOException e) {
-            e.printStackTrace();
-            return "Sivustoa ei ole saatavilla";
-        }
-    }
 }

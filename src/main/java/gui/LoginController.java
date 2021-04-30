@@ -32,7 +32,7 @@ public class LoginController {
      */
     @FXML
     public void login(ActionEvent actionEvent){
-        String token = "NTczNDM2MDM2MDA1NDk0ODA0.XMqz7A.JP81EgWEAMppo-N0ahy8Zbj7KPs"; //inputToken.getText();
+        String token = inputToken.getText();
 
         try {
             botti.Botti.launchBot(token);

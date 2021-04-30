@@ -16,7 +16,7 @@ public class Botti {
         JDABuilder jdabuilder = JDABuilder.createDefault(token);
 
         //Luodaan botille event listenerit ja lisätään ne botille ennen buildaamista
-        BotEventListeners botEvents = new BotEventListeners();
+        BotCfgEventListener botEvents = new BotCfgEventListener();
         //UnicaMenuEventListener safka = new UnicaMenuEventListener();
 
         //Lisää eventListenereitä

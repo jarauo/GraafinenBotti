@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
  * Event listener class for general bot use. For example cfg edit.
  * @author Jani Uotinen
  */
-public class BotEventListeners extends ListenerAdapter {
+public class BotCfgEventListener extends ListenerAdapter {
     String command,prefix,value;
     BotConfiguration botconfig = new BotConfiguration();
 
@@ -35,14 +35,15 @@ public class BotEventListeners extends ListenerAdapter {
             splitCommand(message);
         }
 
-
-        if (command.equals("prefix")) {
-            event.getChannel().sendMessage("Komento: "+command+" ja arvo: "+value).queue();
+        /**
+         * Checks if the command is valid.
+         */
+        if (botconfig.checkLegalCommand(command)) {
+            //processBotConfigCommand(event,value);
+            event.getChannel().sendMessage(botconfig.printCommandList()).queue();
         }
 
-
-
-        //Clear commands at the end
+        //Clear commands at the end.
         clearCommand();
     }
 
@@ -82,6 +83,15 @@ public class BotEventListeners extends ListenerAdapter {
         this.prefix = "";
         this.command = "";
         this.value = "";
+    }
+
+    /**
+     * Processes the change prefix command.
+     * @author Jani Uotinen
+     */
+    public void processBotConfigCommand(MessageReceivedEvent event,String command) {
+        botconfig.changePrefix(command,value);
+        event.getChannel().sendMessage("New prefix is: "+botconfig.getPrefix()).queue();
     }
 
 }
